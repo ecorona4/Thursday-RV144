@@ -51,6 +51,8 @@ rownames(results) <- c("none","aids")
 ```{r}
 barchartGC(results,type = "percent")
 ```
+  
+We would expect to see both graphs of eq size (50% on each side) if the two are independent. They do not appear to be equal  ... shedding doubt on the idea of independence. 
 
 We would expect to see both graphs of eq size (50% on each side) if the two are independent. They do not appear to be equal  ... shedding doubt on thwe idea of independence. 
 
@@ -73,7 +75,12 @@ rowPerc(results)
 ```{r}
 chisqtestGC(results, graph = TRUE)
 ```
+  
+  We now test the independence of aids vacine aqnd placebo groups.   
+$H_0:$ The placebo and aids vacine treatments is independent of contracting the disease aids.  
+$h_a:$ Having tyhe vaccine is related to contracting the disease.   
 
+The p-value of 0.4 means the probability of getting a result like that just obtained if the null hypotheis is true is appoximatelt 4 percent. This normally considered significant. 
 
 ## Conclusions
 
